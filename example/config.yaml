@@ -1,0 +1,6 @@
+
+redis:
+  options:
+    redis_type: cluster
+    addrs: ["redis-cluster:6379"]
+    password: ""

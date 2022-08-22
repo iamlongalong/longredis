@@ -193,3 +193,21 @@ SessClient := ApiClient.SubPrefix("session")
 ## 最后
 
 由于时间有限、水平有限，有所遗漏之处还请担待，发现 bug、有无法满足的需求 等，欢迎提 issue 或者 pr。
+
+## TODO
+
+希望这个库能成为一个 开箱即用的、工程化的 redis 库，还有如下部分没有完成：
+- [ ] pipeline 未封装，容易弄混 prefix 
+- [ ] 还有大量命令未封装
+- [ ] 需要基于该 redis 库，集成多种常用的 redis 工具，例如 
+  - [ ] 布隆过滤器
+  - [ ] 分布式锁
+  - [ ] metrics backend
+  - [ ] session
+  - [ ] 分布式 limiter
+  - [ ] 排行榜
+  - [ ] 任务队列
+  - [ ] id 生成器
+  - [ ] 签到表
+- [ ] 需要更多的 example
+

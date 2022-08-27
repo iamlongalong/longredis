@@ -18,7 +18,7 @@ var (
 	}
 
 	RedisSingleOpt = Option{
-		Addrs:     []string{"redis:6379"},
+		Addrs:     []string{"redis.default:6379"},
 		Password:  "",
 		RedisType: RedisTypeSingleton,
 	}
@@ -46,7 +46,7 @@ func TestSingle(t *testing.T) {
 	c := getSingleClient()
 	runAllTest(c, t)
 
-	c = c.SubPrefix("longredis_pre")
+	c = c.SubPrefix("iredis_pre")
 	runAllTest(c, t)
 }
 
@@ -54,7 +54,7 @@ func TestCluster(t *testing.T) {
 	c := getSingleClient()
 	runAllTest(c, t)
 
-	c = c.SubPrefix("longredis_pre")
+	c = c.SubPrefix("iredis_pre")
 	runAllTest(c, t)
 }
 
@@ -549,7 +549,7 @@ func stringTest(c *Client, t *testing.T) {
 }
 
 func tid() string {
-	return fmt.Sprintf("longredis_test:%s", genID(8))
+	return fmt.Sprintf("iredis_test:%s", genID(8))
 }
 
 func mapEqual(m1 map[string]interface{}, m2 map[string]interface{}) bool {

@@ -211,3 +211,27 @@ SessClient := ApiClient.SubPrefix("session")
   - [ ] 签到表
 - [ ] 需要更多的 example
 
+## 测试环境搭建
+
+可以参考 https://github.com/iamlongalong/redis-instances 进行操作
+
+## PS
+
+redis 真的是一个很牛逼的项目啊，不仅 redis 本身，还有其扩展部分 redis-stack，包含了 
+- redisinsight (图形操作面板 + 教程)
+- Search (文档查询、全文索引)
+- JSON (文档存储，类似 mongodb)
+- graph (图数据库)
+- Time series (时间序列数据库)
+- 其他常用的使用的封装
+  - 布隆过滤器
+  - 布谷鸟过滤器
+  - 最小计数草图 (可以参考[这篇文档](https://zhuanlan.zhihu.com/p/369981005)介绍)
+  - top-k
+  - tdigest
+
+
+具体可以查看[官网信息](https://redis.io/docs/stack/get-started/)
+
+另外，redis 官方也做了很多教程啊！！！ 可以查看 [官方站点](https://university.redis.com/)
+不得不说，redis-stack 把实验教程直接融入到 redis-insight 项目中，真的是太新手友好了！具体可以查看 [官方说明](https://redis.io/docs/stack/insight/)

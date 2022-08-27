@@ -189,7 +189,7 @@ func newClient(opt Option) (*client, error) {
 
 	if err := c.Ping(context.Background()); err != nil {
 		c.logger.Log(LevelError, fmt.Sprintf("redis client ping error: %s", err), "address", strings.Join(c.opt.Addrs, ","))
-		return nil, errors.Wrap(err, "[longredis] newClient ping error")
+		return nil, errors.Wrap(err, "[iredis] newClient ping error")
 	}
 
 	return c, nil
